@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "busers",
+  "info": {
+    "name": "buser",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "githubUsername": {
+      "type": "string"
+    },
+    "blogTitle": {
+      "type": "string"
+    },
+    "blogDescribe": {
+      "type": "string"
+    },
+    "htmlTitle": {
+      "type": "string"
+    },
+    "fontColor": {
+      "type": "string"
+    },
+    "useBackgroundImage": {
+      "type": "boolean",
+      "default": false
+    },
+    "backgroundColorLeft": {
+      "type": "string"
+    },
+    "backgroundColorRight": {
+      "type": "string"
+    },
+    "audioUrl": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "mini": {
+      "type": "boolean",
+      "default": false
+    },
+    "webSites": {
+      "type": "json"
+    }
+  }
+}
